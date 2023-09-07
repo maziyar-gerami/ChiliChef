@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_report"
+    android:layout_width="300dp"
+    android:layout_height="250dp"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        style="@style/AllText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reasonReport"
+        android:textColor="@color/colorAccent"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="150"
+        android:textColor="@color/colorAccent"
+        >
+        <EditText
+            android:id="@+id/dialog_report_ET"
+            style="@style/AllText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:ems="6"
+            android:maxLength="150"
+            android:maxLines="4"
+            android:scrollbars="vertical"
+            android:textColor="@color/colorAccent"/>
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/dialog_report_BTN"
+        style="@style/AllText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_button"
+        android:textColor="@color/colorAccent"
+        android:text="@string/reportSend"
+        />
+
+</LinearLayout>
