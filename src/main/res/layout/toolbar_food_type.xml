@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Toolbar_Categories"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/background_radius"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:weightSum="10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/LinFoodType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.25"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/TV_typeFoodType"
+                style="@style/AllText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/ic_cat_food"
+                android:text="@string/typeFood"
+                android:textColor="@color/colorAccent"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/View1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.07"
+            android:background="@color/colorAccent" />
+
+        <LinearLayout
+            android:id="@+id/LinValueBase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="3.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TV_typeFood"
+                style="@style/AllText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/ic_cat_health"
+                android:text="@string/valueBase"
+                android:textColor="@color/colorAccent"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/View2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.07"
+            android:background="@color/colorAccent" />
+
+        <LinearLayout
+            android:id="@+id/LinEvents"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_weight="3.25">
+
+            <TextView
+                android:id="@+id/TV_events"
+                style="@style/AllText"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/ic_cat_birth"
+                android:textColor="@color/colorAccent"
+
+                android:text="@string/events" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>
