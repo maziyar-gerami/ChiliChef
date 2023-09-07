@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:id="@+id/swipe"
+    android:background="@color/white"
+    tools:context=".BottomBar.BbHomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="340dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorPrimary"
+            android:text="چیلی   "
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="60sp"/>
+
+        <ImageView
+            android:layout_width="340dp"
+            android:layout_height="240dp"
+            android:src="@drawable/main_pic"
+            android:layout_alignParentEnd="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cat"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="220dp">
+
+            <include
+                layout="@layout/toolbar_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            </include>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/cat"
+            android:layout_marginStart="7dp">
+
+            <LinearLayout
+                android:id="@+id/MainRecyclerRec"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginEnd="7dp"
+                android:orientation="horizontal"
+                android:background="@color/liiight_gray"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/mainNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shadow"
+                    android:orientation="vertical"
+                    android:weightSum="2.5">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/main1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="7dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="@string/recipe_offer_notes" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mainWhatCook"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shadow"
+                    android:orientation="vertical"
+                    android:weightSum="2.5">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/main2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="7dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="@string/chef_wht" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mainCat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shadow"
+                    android:orientation="vertical"
+                    android:weightSum="2.5">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/main3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="7dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="@string/categories" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:id="@+id/UpAdvRecycler"
+                android:layout_marginEnd="7dp"
+                android:layout_below="@id/MainRecyclerRec"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textGallery"
+            android:text="محبوب ترین تصاویر"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_below="@id/UpAdvRecycler"
+            android:layout_margin="5dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/GalleryRecyclerLikes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="ltr"
+            android:scrollbars="vertical"
+            android:layout_below="@id/textGallery"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textRecipe"
+            android:text="محبوب ترین دستور پخت"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_below="@id/GalleryRecyclerLikes"
+            android:layout_margin="5dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recipesRecyclerLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:scrollbars="vertical"
+            android:layout_below="@id/textRecipe"/>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:id="@+id/DownAdvRecycler"
+            android:layout_below="@id/recipesRecyclerLikes"
+            android:layout_marginStart="7dp"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
