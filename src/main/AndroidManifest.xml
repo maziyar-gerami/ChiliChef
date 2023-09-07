@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ict.chilichef">
+
+    <uses-sdk tools:overrideLibrary="co.ronash.pushe" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.ict.chilichef.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ict.chilichef.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
+    <application
+        android:name=".Manage.Font"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:alwaysRetainTaskState="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".NavigationItems.RecipesSendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavigationItems.ImageSendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavigationItems.Notes.NotesCatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavigationItems.Bookmark.BookmarkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavigationItems.Shared.SharedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavigationItems.SupportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavigationItems.Categories.FoodCategoriesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavigationItems.What2Cook.WhatCookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CommentRecipesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".UsersManage.UsersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecipesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FoodActivity"
+            android:label="@string/title_activity_food"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".NavigationItems.Categories.TabFoodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavigationItems.Shared.FollowingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".NavigationItems.Shared.FollowerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavigationItems.What2Cook.ProposeFoodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RelatedImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CommentGalleryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".UsersManage.UserFollowerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".UsersManage.UserFollowingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".NavigationItems.Notes.TabNotesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".BottomBar.DesignTab.TabDesignActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".BottomBar.DesignTab.DesignDescriptionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".BottomBar.DesignTab.TabDesignFixedActivity" />
+        <activity android:name=".CommentGalleryFixActivity" />
+        Mahshid, [07.03.18 11:55]
+        <receiver android:name="co.ronash.pushe.receiver.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data
+                    android:path="com.ict.chilichef"
+                    android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="co.ronash.pushe.receiver.PusheGcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.ict.chilichef" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="co.ronash.pushe.token"
+            android:value="PUSHE_880720731358" />
+        <meta-data
+            android:name="co.ronash.pushe.cr"
+            android:value="aHR0cDovLzdlOTJkZjg1YTYwNzRhYzk5NzYyNjk1ZTlkZjZkNDU2OjIyN2U2MjEwNTQ2NDQyZjNhNzQ2NmNmNjdkYTBiOGU3QGNhLnB1c2hlLmlyLzExMjg0" />
+
+        <activity android:name=".NavigationItems.ARMActivity"></activity>
+    </application>
+
+</manifest>
