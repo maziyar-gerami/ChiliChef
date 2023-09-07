@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbarComment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:background="#f1eeee">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3.5"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <EditText
+            android:id="@+id/ET_comment"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="3.3"
+            android:hint="نظر خود را بنویسید"
+            android:textColor="@color/colorAccent"
+            android:inputType="textNoSuggestions" />
+
+        <ImageButton
+            android:id="@+id/IB_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_send" />
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>
