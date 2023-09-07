@@ -1,0 +1,76 @@
+
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.ict.chilichef"
+        minSdkVersion 19
+        targetSdkVersion 22
+
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    repositories {
+        maven { url 'http://repo1.maven.org/maven2' }
+    }
+
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+        //noinspection GradleCompatible
+        implementation 'com.android.support:appcompat-v7:26.1.0'
+        testImplementation 'junit:junit:4.12'
+        implementation 'com.roughike:bottom-bar:2.3.1'
+        implementation 'com.android.support:appcompat-v7:26.1.0'
+        implementation 'com.android.support:design:26.1.0'
+        implementation 'com.android.support:cardview-v7:26.1.0'
+        implementation 'com.android.support:recyclerview-v7:26.1.0'
+        implementation 'com.android.support:support-v4:26.1.0'
+        implementation 'uk.co.chrisjenx:calligraphy:2.1.0'
+        implementation 'de.hdodenhof:circleimageview:2.1.0'
+//        compile 'com.google.android.firebase:firebase-appindexing:10.0.0'
+        implementation 'org.solovyev.android.views:linear-layout-manager:0.5@aar'
+        implementation 'de.hdodenhof:circleimageview:2.1.0'
+        implementation 'com.squareup.picasso:picasso:2.5.2'
+        implementation 'com.soundcloud.android:android-crop:1.0.1@aar'
+        implementation 'com.theartofdev.edmodo:android-image-cropper:2.4.7'
+
+        //noinspection GradleCompatible,GradleCompatible
+        implementation 'com.google.firebase:firebase-appindexing:11.0.4'
+
+        implementation 'co.ronash.android:pushe-base:1.3.4'
+        implementation 'com.google.android.gms:play-services-gcm:11.0.4'
+
+        implementation 'com.github.clans:fab:1.6.2'
+
+
+        implementation files('libs/CircleImageView-master/gradle/wrapper/gradle-wrapper.jar')
+        implementation files('libs/Android-Universal-Image-Loader-master/downloads/universal-image-loader-1.9.5.jar')
+        implementation files('libs/Android-Universal-Image-Loader-master/downloads/universal-image-loader-1.9.5-javadoc.jar')
+    }
+}
+dependencies {
+    implementation 'com.android.support:support-v4:26.1.0'
+}
+
+
