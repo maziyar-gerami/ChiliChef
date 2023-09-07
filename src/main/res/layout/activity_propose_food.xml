@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_propose_food"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ict.chilichef.NavigationItems.What2Cook.ProposeFoodActivity">
+
+    <include
+        layout="@layout/toolbar_public"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/include6" />
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/TestInternet"-->
+    <!--android:background="@drawable/no_internet"-->
+    <!--android:layout_below="@id/include6"-->
+    <!--android:visibility="gone"-->
+    <!--/>-->
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layoutDirection="rtl"
+        android:layout_below="@+id/include6" />
+
+    <!--<ProgressBar-->
+    <!--style="@style/Widget.AppCompat.ProgressBar"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:id="@+id/ProposeFood_progressBar" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/non"
+        android:layout_centerInParent="true"
+        android:text="غذایی با مواد اولیه وارد شده یافت نشد"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>
