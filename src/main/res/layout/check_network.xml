@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    android:background="@color/white"
+    android:id="@+id/checkNetLayout"
+    android:gravity="center"
+    android:weightSum="7">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_connection"
+        android:layout_weight="2.5"
+        android:layout_marginBottom="100dp"
+        android:id="@+id/connectIV"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connectTV"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:layout_weight="0.5"
+        android:text="@string/checkNetwork"
+        android:gravity="center"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        >
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_try_again"
+        android:id="@+id/retry"
+        />
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
