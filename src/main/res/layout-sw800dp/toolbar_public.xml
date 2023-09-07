@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/Toolbar_Public"
+    android:layoutDirection="rtl"
+    app:contentInsetStart="8dp"
+    app:contentInsetEnd="8dp"
+    android:minHeight="?attr/actionBarSize"
+    android:paddingBottom="5dp"
+    android:fitsSystemWindows="true"
+    app:titleTextAppearance="@style/ToolbarTitleTextAppearance"
+    app:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:contentInsetStartWithNavigation="0dp"
+    android:background="@drawable/below_shadow">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/PublicLeft_icon_id"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/PublicTitle_toolbar"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/PublicRight_icon_id"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:padding="13dp"
+            />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.Toolbar>
