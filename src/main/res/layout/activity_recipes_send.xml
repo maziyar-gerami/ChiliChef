@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".NavigationItems.RecipesSendActivity">
+
+    <include
+        layout="@layout/toolbar_public"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <EditText
+                android:id="@+id/recipeSend_foodTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/recipe_title"
+                android:textColorHint="@color/light_gray"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:backgroundTint="@color/light_gray"
+                android:textCursorDrawable="@drawable/color_cursor"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/CountTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/suitableFor"
+                    android:textColor="@color/colorAccent"
+                    />
+
+                <EditText
+                    android:id="@+id/recipeSend_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_toEndOf="@id/CountTV"
+                    android:background="#e9e7e7"
+                    android:textAlignment="center"
+                    android:hint="       "
+                    android:textColor="@color/colorAccent"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+                <TextView
+                    android:id="@+id/fillCountTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/recipeSend_number"
+                    android:text="نفر"
+                    android:textColor="@color/colorAccent"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/timeRecipes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/timeToCook"
+                    android:textColor="@color/colorAccent"
+                    />
+
+                <EditText
+                    android:id="@+id/timeFill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_toEndOf="@id/timeRecipes"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:background="#e9e7e7"
+                    android:hint="       "
+                    android:inputType="number"
+                    android:maxLength="3"
+                    />
+
+                <TextView
+                    android:id="@+id/recipeSend_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/timeFill"
+                    android:text="@string/minute"
+                    android:textColor="@color/colorAccent"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/difficulty"
+                    android:textColor="@color/colorAccent"
+                    />
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group_hard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/easy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="آسان"
+                        android:textColor="@color/colorAccent"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/med"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="متوسط"
+                        android:textColor="@color/colorAccent"
+                        />
+
+
+                    <RadioButton
+                        android:id="@+id/hard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="سخت"
+                        android:textColor="@color/colorAccent"
+                        />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/ingredient"
+                    android:textColor="@color/colorAccent"
+                    />
+
+                <Button
+                    android:id="@+id/addIngredientBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/shadow_bottom"
+                    android:text="@string/add_newItem"
+                    android:textColor="@color/colorAccent"
+                    />
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Ingredient_Recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <EditText
+                android:id="@+id/recipeSend_foodDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:textColorHint="@color/light_gray"
+                android:backgroundTint="@color/light_gray"
+                android:textCursorDrawable="@drawable/color_cursor"
+
+                />
+
+
+            <ImageView
+                android:id="@+id/show_photo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="#66dadada" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:text="@string/addImage"
+                android:textColor="@color/colorAccent"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/image_gallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_gallery" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorAccent"
+                    android:padding="3dp" />
+
+                <ImageButton
+                    android:id="@+id/image_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_camera" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/ImageSend_rules_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/rulesRecipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recipeRules"
+                    android:textColor="@color/colorAccent"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/sendRecipeBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_button"
+                android:text="@string/addRecipe"
+                android:textColor="@color/colorAccent"
+                android:layout_marginBottom="30dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
