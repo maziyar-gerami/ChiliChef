@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_chef_wht"
+        android:id="@+id/tab_info"
+        android:title="@string/design_chef" />
+
+    <item
+        android:icon="@drawable/ic_food_doc"
+        android:id="@+id/tab_rec"
+        android:title="@string/recipes" />
+
+    <item
+        android:icon="@drawable/ic_home"
+        android:id="@+id/tab_home"
+        android:title="@string/home" />
+
+    <item
+        android:icon="@drawable/ic_camera"
+        android:id="@+id/tab_image"
+        android:title="@string/gallery" />
+
+
+    <item
+        android:icon="@drawable/ic_search"
+        android:id="@+id/tab_search"
+        android:title="@string/search" />
+
+
+    <!--barColorWhenSelected="@color/bottom_navigation_1"-->
+</menu>
