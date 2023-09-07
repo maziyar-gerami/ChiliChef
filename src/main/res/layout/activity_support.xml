@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ict.chilichef.NavigationItems.SupportActivity">
+
+    <include
+        android:id="@+id/Toolbar_Public"
+        layout="@layout/toolbar_public"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Toolbar_Public">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/icon"
+            android:layout_gravity="center"/>
+
+        <TextView
+            style="@style/AllText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="درباره سرآشپز چیلی"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            />
+
+        <TextView
+            style="@style/AllText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/introduction"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"/>
+
+        <TextView
+            style="@style/AllText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="راه‌های ارتباطی"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/telegram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_telegram" />
+
+            <ImageButton
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_email1" />
+
+            <ImageButton
+                android:id="@+id/instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_instagram" />
+
+            <ImageButton
+                android:id="@+id/facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_facebook" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/SmallText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            />
+    </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
