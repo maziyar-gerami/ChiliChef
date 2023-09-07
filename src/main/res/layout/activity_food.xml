@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_tab_food"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.ict.chilichef.FoodActivity">
+
+    <include
+        layout="@layout/toolbar_public"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarFood"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layoutDirection="rtl"
+        android:layout_below="@id/toolbarFood"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"/>
+
+    <include
+        layout="@layout/check_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>
+
+
+
