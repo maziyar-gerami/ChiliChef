@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_Categories"
+        android:icon="@drawable/ic_category"
+        android:title="@string/categories"
+        app:actionLayout="@layout/categories"/>
+
+
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/ic_bookmark"
+        android:title="@string/recipe_favorite"
+        app:showAsAction="ifRoom"></item>
+
+    <item
+        android:id="@+id/nav_recipe_notes"
+        android:icon="@drawable/ic_note"
+        android:title="@string/recipe_offer_notes"
+        app:showAsAction="ifRoom"></item>
+
+    <item
+        android:id="@+id/nav_chef_wht"
+        android:icon="@drawable/ic_chef_wht"
+        android:title="@string/chef_wht"
+        app:showAsAction="ifRoom"></item>
+
+    <item
+        android:id="@+id/nav_share_app"
+        android:icon="@drawable/ic_share_chili"
+        android:title="@string/shared"
+        app:showAsAction="ifRoom"></item>
+
+
+    <item
+        android:id="@+id/nav_send_pic"
+        android:icon="@drawable/ic_add_image"
+        android:title="@string/send_pic"
+        app:showAsAction="ifRoom"></item>
+
+    <item
+        android:id="@+id/nav_send_recipe"
+        android:icon="@drawable/ic_food_doc_add"
+        android:title="@string/send_recipe"
+        app:showAsAction="ifRoom"></item>
+
+    <item
+        android:id="@+id/nav_support"
+        android:icon="@drawable/ic_chef"
+        android:title="@string/app_name"></item>
+
+    <item
+        android:id="@+id/nav_ARM"
+        android:icon="@drawable/ic_support"
+        android:title="@string/support"></item>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/logout"></item>
+
+
+</menu>
