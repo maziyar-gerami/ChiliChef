@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_camera"
+        android:text="عکس از دوربین"
+        android:background="@android:color/transparent"
+        android:textStyle="bold"
+        android:textColor="#00b8d4"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_gallery"
+        android:text="انتخاب از گالری"
+        android:background="@android:color/transparent"
+        android:textStyle="bold"
+        android:textColor="#689f38"
+        android:textSize="20sp"
+        android:layout_below="@+id/img_camera"/>
+
+</RelativeLayout>
