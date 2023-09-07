@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context="com.ict.chilichef.NavigationItems.What2Cook.WhatCookActivity"
+    >
+
+    <include
+        layout="@layout/toolbar_public"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/includeToolbar">
+    </include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/includeToolbar"
+       >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/chilchi"
+            android:alpha="0.5"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/whatCook_addIng_firstBtn"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_button"
+            android:layout_marginBottom="10dp"
+            android:text="@string/add"
+            android:layout_margin="10dp"
+            android:textColor="@color/colorAccent"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Layout_showFood"
+            android:weightSum="4"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone">
+
+
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                android:id="@+id/whatCook_addIng_roundBtn"
+                android:background="@drawable/ic_plus"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"/>
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/whatCook_seeFoodList_Btn"
+                android:layout_weight="3"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/shape_button"
+                android:text="@string/foodList"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_ingredient_Text"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/whatCook_addIng_firstBtn"
+            android:text="لطفا حداقل چهار ماده غذایی انتخاب کنید"
+            android:textColor="@color/colorAccent"
+            android:layout_marginBottom="30dp"
+            />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Final_Propose_Ingredient_Recycler"
+            android:layout_alignParentStart="true"
+            android:layout_above="@id/Layout_showFood"
+            android:layout_alignParentTop="true"
+            android:padding="10dp"
+            />
+
+
+
+
+    </RelativeLayout>
+
+    <!--<ProgressBar-->
+    <!--android:id="@+id/progressBar"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--style="@style/Widget.AppCompat.ProgressBar"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:indeterminate="true"-->
+    <!--android:visibility="gone"/>-->
+
+
+
+</RelativeLayout>
